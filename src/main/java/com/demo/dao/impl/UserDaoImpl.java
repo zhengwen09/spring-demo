@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDaoImpl implements UserDao {
     public User getUserById(Integer id) {
-        SqlSession session = SqlSessionFactoryManager.sqlSessionFactory.openSession();
 
-        User user =  session.selectOne("com.demo.mapper.UserMapper.getUserByID", id);
-
-        session.close();
-        return user;
+        try( SqlSession session = SqlSessionFactoryManager.sqlSessionFactory.openSession()){
+            User user =  session.selectOne("com.demo.mapper.UserMapper.getUserByID", id);
+            session.close();
+            return user;
+        }
     }
 }
