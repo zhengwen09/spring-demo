@@ -6,4 +6,22 @@
     <select id="getUserByID" parameterType="int" resultType="com.demo.entity.User">
         select * from `user` where id = #{id}
     </select>
+
+    <insert id="insertUser" parameterType="com.demo.entity.User">
+      INSERT INTO `user` (name,dept, website,phone)
+      VALUES(#{name}, #{dept}, #{website}, #{phone})
+    </insert>
+
+    <update id="updateUser" parameterType="com.demo.entity.User">
+        UPDATE `user`
+        SET
+        name=
+        #{name},
+        dept = #{dept},
+        website = #{website},
+        phone = #{phone}
+        WHERE
+        id =
+        #{id}
+    </update>
 </mapper>

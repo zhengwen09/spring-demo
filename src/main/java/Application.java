@@ -11,15 +11,17 @@ import java.io.IOException;
  */
 public class Application {
     public static void main(String[] args) throws IOException {
-
         ApplicationContext context = new ClassPathXmlApplicationContext("config/beans.xml");
         UserService userService = context.getBean(UserService.class);
+        User user=new User();
+        user.setId(1);
+        user.setName("hello--");
+        user.setDept("bbbb");
+        user.setPhone("");
+        user.setWebsite("http://www.baidu.com");
 
-        User user = userService.getUserById(1);
-        if (user != null) {
-            System.out.println(user.getName());
-        }
-
+        Integer result=userService.updateUser(user);
+        System.out.println(result);
     }
 
 }

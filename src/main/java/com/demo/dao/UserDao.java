@@ -8,4 +8,8 @@ import com.demo.entity.User;
  */
 public interface UserDao {
     public User getUserById(Integer id) ;
+
+    public Integer insertUser(User user);
+
+    public Integer updateUser(User user);
 }

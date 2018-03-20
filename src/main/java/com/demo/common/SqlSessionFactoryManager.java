@@ -20,6 +20,7 @@ public class SqlSessionFactoryManager {
             e.printStackTrace();
         }
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+
     }
 
 }

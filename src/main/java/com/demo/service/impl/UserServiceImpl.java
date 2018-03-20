@@ -18,4 +18,14 @@ public class UserServiceImpl implements UserService {
     public User getUserById(Integer id) {
         return userDao.getUserById(id);
     }
+
+    @Override
+    public Integer insertUser(User user) {
+       return userDao.insertUser(user);
+    }
+
+    @Override
+    public Integer updateUser(User user) {
+        return userDao.updateUser(user);
+    }
 }
