@@ -15,7 +15,7 @@ public class SqlSessionFactoryManager {
 
     static {
         try {
-            reader = Resources.getResourceAsReader("config/MyBatisConfig.xml");
+            reader = Resources.getResourceAsReader("MyBatisConfig.xml");
         } catch (Exception e) {
             e.printStackTrace();
         }

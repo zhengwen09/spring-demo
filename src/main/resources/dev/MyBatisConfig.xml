@@ -6,10 +6,7 @@
         <environment id="development">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="" />
-                <property name="username" value="" />
-                <property name="password" value="" />
+               
             </dataSource>
         </environment>
     </environments>

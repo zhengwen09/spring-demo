@@ -12,4 +12,6 @@ public interface UserDao {
     public Integer insertUser(User user);
 
     public Integer updateUser(User user);
+
+
 }
